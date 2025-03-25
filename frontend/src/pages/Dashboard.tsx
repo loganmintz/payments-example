@@ -243,9 +243,8 @@ const Dashboard: React.FC = () => {
       setBuyError(null);
       setBuySuccess(false);
       
-      // Calculate amount based on RON (10 amount units per 1 RON)
-      // For example, if user enters 1 RON, we should send amount = 10
-      const amountToSend = Math.floor(parseFloat(buyAmount) * 10);
+      // Calculate amount based on RON (1000 amount units per 1 RON)
+      const amountToSend = Math.floor(parseFloat(buyAmount) * 1000);
       
       // Convert RON amount to wei for the value parameter
       const valueToSend = ethers.parseEther(buyAmount);
