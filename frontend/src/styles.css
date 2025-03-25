@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'SF Pro Display', 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F4F7FE;
+  color: #0A1F44;
+  background-image: url('/images/background-content.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-image: url('/images/profileBackground.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .hero-background {
+    background-image: url('/images/profileBackgroundMobile.png');
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3DDC84 0%, #30BA6E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Gem-like elements for balances */
+.gem-balance {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animation for hover effects */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Logo styling */
+.ronin-logo {
+  height: 32px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.ronin-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Custom scrollbar like tama.meme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3DDC84, #30BA6E);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #30BA6E, #3DDC84);
+} 
