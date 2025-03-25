@@ -43,7 +43,7 @@ export const updateGemBalance = async (
     // Convert string to number, multiply by 1000
     const ronBalanceNumber = parseFloat(ronBalance);
     // Calculate gems (1000 gems per RON)
-    const gemBalance = Math.floor(ronBalanceNumber * 1000).toString();
+    const gemBalance = Math.floor(ronBalanceNumber).toString();
     
     // Check if a record already exists
     let gemBalanceRecord = await getGemBalanceByAddress(walletAddress);
